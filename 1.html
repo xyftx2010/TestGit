@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arys1 = new Array();
+    arys1 = "2016-09-25".split('-');
+    console.log(arys1,1);
+    //日期为输入日期，格式为 2013-3-10
+    var ssdate = new Date(arys1[0], parseInt(arys1[1] - 1), arys1[2]);
+    console.log(ssdate,2);
+    var  week1=String(ssdate.getDay()).replace("0","日").replace("1","一").replace("2","二").replace("3","三").replace("4","四").replace("5","五").replace("6","六")//就是你要的星期几
+    console.log(week1);
+    var week="星期"+week1; //就是你要的星期几
+    console.log(week);
+    var a ='191015';
+    console.log(getweek(a));;
+    function getweek(b) {
+        var arys1 = new Array();
+        var c = b.slice(6)+"20"+b.slice(0);
+        var d = c.slice(0,4)+"-"+c.slice(4,6)+"-"+c.slice(6,8);
+        console.log(d);
+        arys1 = d.split('-');
+        //日期为输入日期，格式为 2013-3-10
+        var ssdate = new Date(arys1[0], parseInt(arys1[1] - 1), arys1[2]);
+        var  week1=String(ssdate.getDay()).replace("0","日").replace("1","一").replace("2","二").replace("3","三").replace("4","四").replace("5","五").replace("6","六")//就是你要的星期几
+        var week="星期"+week1; //就是你要的星期几
+        return week
+    }
+
+</script>
+</body>
+</html>
